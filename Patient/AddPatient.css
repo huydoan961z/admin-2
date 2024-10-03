@@ -1,0 +1,172 @@
+
+/* add patient  */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.first-text {
+    font-size: xx-large;
+    color: #4A5568;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.border {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item-full {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+input,
+textarea,
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.photo-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.change-btn {
+    margin-left: 12px;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.change-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cancel-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.save-btn {
+    background-color: #4A90E2;
+    color: #fff;
+}
+
+.save-btn:hover {
+    background-color: #357ABD;
+}
+
+.cancel-btn:hover {
+    background-color: #e0e0e0;
+}
+
+
+
+/* them de co dinh cai duoi  */
+/* Cố định header */
+.layout-default_arm {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Cố định sidebar */
+.layout-default_body_header {
+    position: fixed;
+    top: 50px;
+    height: 100vh;
+    z-index: 9;
+}
+
+/* Điều chỉnh layout để tránh bị che bởi header và sidebar */
+.layout-default_body {
+    margin-top: 50px;
+    
+}
+
+/* Phần chính có thể cuộn */
+.layout-default_body_main {
+    margin-left: 15%;
+    height: calc(100vh - 50px);
+    overflow-y: auto; /* Cuộn dọc cho nội dung dài */
+    scroll-behavior: smooth; /* Hiệu ứng trượt mượt */
+}
+
+/* Ẩn thanh cuộn */
+.layout-default_body_main::-webkit-scrollbar {
+    width: 0px; /* Ẩn thanh cuộn dọc */
+}
+
+/* Làm mượt khi cuộn */
+.layout-default_body_main {
+    scrollbar-width: none; /* Ẩn thanh cuộn cho Firefox */
+    -ms-overflow-style: none; /* Ẩn thanh cuộn cho IE và Edge */
+}
+

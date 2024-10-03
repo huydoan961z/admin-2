@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management System</title>
+    <link rel="stylesheet" href="LayoutDefault.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="layout-default">
+        <header class="layout-default_arm">
+            <div onclick="backHome()" class="layout-default_arm_logo">Logo</div>
+            <div onclick="backHome()" class="layout-default_arm_content">Admin Management System</div>
+            <button class='layout-default_arm_button' onclick="logOut()">Log out</button>
+        </header>
+        <div class="layout-default_body">
+            <aside class="layout-default_body_header">
+                <div class="layout-default_menu">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="active">Home</a>
+                        </li>
+                        <li>
+                            <a href="doctor.html">Here doctor</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="patient.html">Here patient</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="service.html">Here service</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="layout-default_body_main">
+                <h1 class="title">Dashboard Statistics System</h1>
+
+    <div class="statistics-container">
+        <div class="stat-item">
+            <div class="stat-title">Revenue</div>
+            <div class="stat-value" id="revenue">$20,000</div>
+            <div class="stat-percentage increase">+4.75%</div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="stat-title">Total Appointments</div>
+            <div class="stat-value" id="total-appointments">320</div>
+            <div class="stat-percentage increase">+54.02%</div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="stat-title">Doctor Booking Appointments</div>
+            <div class="stat-value" id="doctor-booking-appointments">150</div>
+            <div class="stat-percentage decrease">-1.39%</div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="stat-title">Total Customers</div>
+            <div class="stat-value" id="total-customers">250</div>
+            <div class="stat-percentage increase">+10.18%</div>
+        </div>
+        
+    </div>
+
+    <div class="chart-container">
+        <div class="stack-bar">
+            <canvas id="stackedBarChart"></canvas>
+        </div>
+        <div class="pie-chart">
+            <canvas id="pieChart"></canvas>
+        </div>
+    </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

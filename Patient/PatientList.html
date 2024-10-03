@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management System</title>
+    <link rel="stylesheet" href="PatientList.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="layout-default">
+        <header class="layout-default_arm">
+            <div onclick="backHome()" class="layout-default_arm_logo">Logo</div>
+            <div onclick="backHome()" class="layout-default_arm_content">Admin Management System</div>
+            <button class='layout-default_arm_button' onclick="logOut()">Log out</button>
+        </header>
+        <div class="layout-default_body">
+            <aside class="layout-default_body_header">
+                <div class="layout-default_menu">
+                    <ul>
+                        <li>
+                            <a href="index.html" >Home</a>
+                        </li>
+                        <li>
+                            <a href="doctor.html">Here doctor</a>
+                        </li>
+                        <li>
+                            <a href="patient.html" class="active">Here patient</a>
+                        </li>
+                        <li>
+                            <a href="service.html">Here service</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="layout-default_body_main">
+                <div class="patient-dashboard">
+                    <div class="header">
+                        <div class="search-container">
+                            <input type="text" placeholder="Search here...">
+                            <button class="search-btn">🔍</button>
+                        </div>
+                        <button class="add-patient-btn">+ Add Patient</button>
+                    </div>
+            
+                    <div class='sort-options'>
+                        <select id="sortGender" onchange="filterPatients()">
+                            <option value="">All genders</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <select id="sortStatus" onchange="filterPatients()">
+                            <option value="">Status</option>
+                            <option value="Admitted">Admitted</option>
+                            <option value="Discharged">Discharged</option>
+                            <option value="Under Treatment">Under Treatment</option>
+                        </select>
+                    </div>
+            
+                    <table class="patient-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Gender</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Status</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody id="patientList">
+                            <!-- Patient rows will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+            
+                    <div class="pagination">
+                        <button class="page-btn" id="prev-page">Previous</button>
+                        <span id="current-page">1</span> / <span id="total-pages"></span>
+                        <button class="page-btn" id="next-page">Next</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management System</title>
+    <link rel="stylesheet" href="ServiceDetails.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="layout-default">
+        <header class="layout-default_arm">
+            <div onclick="backHome()" class="layout-default_arm_logo">Logo</div>
+            <div onclick="backHome()" class="layout-default_arm_content">Admin Management System</div>
+            <button class='layout-default_arm_button' onclick="logOut()">Log out</button>
+        </header>
+        <div class="layout-default_body">
+            <aside class="layout-default_body_header">
+                <div class="layout-default_menu">
+                    <ul>
+                        <li>
+                            <a href="index.html" >Home</a>
+                        </li>
+                        <li>
+                            <a href="doctor.html">Here doctor</a>
+                        </li>
+                        <li>
+                            <a href="patient.html">Here patient</a>
+                        </li>
+                        <li>
+                            <a href="service.html " class="active">Here service</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="layout-default_body_main">
+                <div class="whole-main">
+                    <div class="profile-header">
+                        <div class="profile-info">
+                            <h3>Id: 456</h3>
+                            <h2>Service: General Checkup</h2>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="profile-status">
+                            <p>Status:</p>
+                            <p>Active</p>
+                        </div>
+                    </div>
+            
+                    <div class="profile-main">
+                        <div class="box-left">
+                            <div class="basic-info">
+                                <div class="basic-info-header">
+                                    <h1>Basic Information</h1>
+                                </div>
+                                <div class="basic-info-main">
+                                    <div class="info-row">
+                                        <div class="label">Category:</div>
+                                        <div class="value">Health</div>
+                                    </div>
+                                    <div class="info-row">
+                                        <div class="label">Price:</div>
+                                        <div class="value">$100</div>
+                                    </div>
+                                    <div class="info-row">
+                                        <div class="label">Description:</div>
+                                        <div class="value">A comprehensive health checkup.</div>
+                                    </div>
+                                    <div class="info-row">
+                                        <div class="label">Duration:</div>
+                                        <div class="value">1 hour</div>
+                                    </div>
+                                    <div class="info-row">
+                                        <div class="label">Rating:</div>
+                                        <div class="value">4.5 stars</div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="intro">
+                                <div class="basic-info-header">
+                                    <h1>Introduction</h1>
+                                </div>
+                                <div class="intro-main">
+                                    Our general checkup service is designed to ensure your overall health and well-being. 
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="box-right">
+                            <div class="feedback">
+                                <div class="basic-info-header">
+                                    <h1>Feedback</h1>
+                                </div>
+                                <div class="feedback-stats">
+                                    <h3>Star Ratings</h3>
+                                    <ul>
+                                        <li><span class="star-rating">★★★★★</span> 150 reviews</li>
+                                        <li><span class="star-rating">★★★★</span> 50 reviews</li>
+                                        <li><span class="star-rating">★★★</span> 20 reviews</li>
+                                        <li><span class="star-rating">★★</span> 10 reviews</li>
+                                        <li><span class="star-rating">★</span> 5 reviews</li>
+                                    </ul>
+            
+                                    <h3>Pros</h3>
+                                    <ul>
+                                        <li>Thorough examination</li>
+                                        <li>Friendly staff</li>
+                                        <li>Quick results</li>
+                                    </ul>
+            
+                                    <h3>Cons</h3>
+                                    <ul>
+                                        <li>Higher cost</li>
+                                        <li>Limited availability</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

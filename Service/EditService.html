@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management System</title>
+    <link rel="stylesheet" href="EditService.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="layout-default">
+        <header class="layout-default_arm">
+            <div onclick="backHome()" class="layout-default_arm_logo">Logo</div>
+            <div onclick="backHome()" class="layout-default_arm_content">Admin Management System</div>
+            <button class='layout-default_arm_button' onclick="logOut()">Log out</button>
+        </header>
+        <div class="layout-default_body">
+            <aside class="layout-default_body_header">
+                <div class="layout-default_menu">
+                    <ul>
+                        <li>
+                            <a href="index.html" >Home</a>
+                        </li>
+                        <li>
+                            <a href="doctor.html">Here doctor</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="patient.html">Here patient</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="service.html" class="active">Here service</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="layout-default_body_main">
+                <div class="edit-service-container">
+                    <h1>Edit Service Information</h1>
+                    <div class="form-group">
+                        <label for="serviceName">Service Name:</label>
+                        <input type="text" id="serviceName" name="serviceName" placeholder="Enter service name" />
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="type">Service Type:</label>
+                        <input type="text" id="type" name="type" placeholder="Enter service type" />
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" placeholder="Enter price" />
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="speciality">Speciality:</label>
+                        <input type="text" id="speciality" name="speciality" placeholder="Enter speciality" />
+                    </div>
+            
+                    <button class="save-button" onclick="handleSave()">Save Changes</button>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

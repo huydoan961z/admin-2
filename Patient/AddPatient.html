@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management System</title>
+    <link rel="stylesheet" href="../LayoutDefault/LayoutDefault.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="AddPatient.css">
+</head>
+<body>
+    <div class="layout-default">
+        <header class="layout-default_arm">
+            <div onclick="backHome()" class="layout-default_arm_logo">Logo</div>
+            <div onclick="backHome()" class="layout-default_arm_content">Admin Management System</div>
+            <button class='layout-default_arm_button' onclick="logOut()">Log out</button>
+        </header>
+        <div class="layout-default_body">
+            <aside class="layout-default_body_header">
+                <div class="layout-default_menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="doctor.html" >Here doctor</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="patient.html"  class="active">Here patient</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="service.html">Here service</a>
+                            <ul class='menu_sub'>
+                                <!-- Submenu items can be added here -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="layout-default_body_main">
+                <form>
+                    <!-- Section 1: Patient Information -->
+                    <div class="section">
+                        <div class="border">
+                            <h1 class="first-text">Patient Information</h1>
+            
+                            <div class="grid-container">
+                                <!-- ID -->
+                                <div class="grid-item">
+                                    <label for="id">ID</label>
+                                    <input id="id" name="id" type="text" placeholder="Patient ID">
+                                </div>
+            
+                                <!-- Photo -->
+                                <div class="grid-item">
+                                    <label for="photo">Photo</label>
+                                    <div class="flex-container">
+                                        <div class="icon photo-icon"></div>
+                                        <button type="button" class="change-btn">Change</button>
+                                    </div>
+                                </div>
+            
+                                <!-- First Name -->
+                                <div class="grid-item">
+                                    <label for="first-name">First Name</label>
+                                    <input id="first-name" name="first-name" type="text">
+                                </div>
+            
+                                <!-- Last Name -->
+                                <div class="grid-item">
+                                    <label for="last-name">Last Name</label>
+                                    <input id="last-name" name="last-name" type="text">
+                                </div>
+            
+                                <!-- Gender -->
+                                <div class="grid-item">
+                                    <label for="gender">Gender</label>
+                                    <select id="gender" name="gender">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+            
+                                <!-- Date of Birth -->
+                                <div class="grid-item">
+                                    <label for="dob">Date of Birth</label>
+                                    <input id="dob" name="dob" type="date">
+                                </div>
+            
+                                <!-- Address -->
+                                <div class="grid-item">
+                                    <label for="address">Address</label>
+                                    <input id="address" name="address" type="text" placeholder="Patient's address">
+                                </div>
+            
+                                <!-- Phone -->
+                                <div class="grid-item">
+                                    <label for="phone">Phone Number</label>
+                                    <input id="phone" name="phone" type="tel" placeholder="Phone number">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Section 2: Additional Information -->
+                    <div class="section">
+                        <div class="border">
+                            <h1 class="first-text">Additional Information</h1>
+            
+                            <div class="grid-container">
+                                <!-- Pre-existing Conditions -->
+                                <div class="grid-item-full">
+                                    <label for="experience">Pre-existing Conditions</label>
+                                    <textarea id="experience" name="experience" rows="3"></textarea>
+                                </div>
+            
+                                <!-- Private Notes -->
+                                <div class="grid-item-full">
+                                    <label for="awards">Private Notes</label>
+                                    <textarea id="awards" name="awards" rows="3"></textarea>
+                                </div>
+            
+                                <!-- Status -->
+                                <div class="grid-item">
+                                    <label for="status">Status</label>
+                                    <select id="status" name="status">
+                                        <option>Active</option>
+                                        <option>Inactive</option>
+                                        <option>Retired</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Submit Button -->
+                    <div class="submit-container">
+                        <button type="button" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Save</button>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

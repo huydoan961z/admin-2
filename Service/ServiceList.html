@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management System - Services</title>
+    <link rel="stylesheet" href="ServiceList.css">
+</head>
+<body>
+    <div class="layout-default">
+        <header class="layout-default_arm">
+            <div onclick="backHome()" class="layout-default_arm_logo">Logo</div>
+            <div onclick="backHome()" class="layout-default_arm_content">Admin Management System</div>
+            <button class='layout-default_arm_button' onclick="logOut()">Log out</button>
+        </header>
+        <div class="layout-default_body">
+            <aside class="layout-default_body_header">
+                <div class="layout-default_menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="doctor.html">Doctors</a></li>
+                        <li><a href="patient.html">Patients</a></li>
+                        <li><a href="service.html" class="active">Services</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="layout-default_body_main">
+                <div class="service-dashboard">
+                    <div class="header">
+                      <div class="search-container">
+                        <input type="text" placeholder="Search here..." id="searchInput">
+                        <button class="search-btn">🔍</button>
+                      </div>
+                      <button class="add-service-btn">+ Add Service</button>
+                    </div>
+                    <div class="sort-options">
+                      <select id="sortType">
+                        <option value="">All Types</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Diagnostic">Diagnostic</option>
+                      </select>
+                      <select id="sortStatus">
+                        <option value="">All Statuses</option>
+                        <option value="Available">Available</option>
+                        <option value="Unavailable">Unavailable</option>
+                      </select>
+                    </div>
+                    <table class="service-table">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Service Name</th>
+                          <th>Type</th>
+                          <th>Price</th>
+                          <th>Status</th>
+                          <th>Options</th>
+                        </tr>
+                      </thead>
+                      <tbody id="serviceBody">
+                        <!-- Dynamic Service Rows will be inserted here -->
+                      </tbody>
+                    </table>
+                    <div class="pagination">
+                      <button class="page-btn" id="prev-page">Previous</button>
+                      <span>Page <span id="current-page">1</span> / <span id="total-pages">1</span></span>
+                      <button class="page-btn" id="next-page">Next</button>
+                  </div>
+                  
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="ServiceList.js"></script>
+</body>
+</html>

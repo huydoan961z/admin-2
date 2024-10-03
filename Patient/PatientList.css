@@ -1,0 +1,293 @@
+body{
+    margin: 0;
+}
+.layout-default {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    height: 2000px; /* Adjust as needed */
+
+}
+
+.layout-default_arm {
+    background: #92D7EE;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.layout-default_arm_logo {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.layout-default_arm_content {
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.layout-default_arm_button {
+    margin-right: 20px;
+    padding: 10px 10px;
+    font-size: small;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+.layout-default_body {
+    display: flex;
+    flex: 1;
+}
+
+.layout-default_body_header {
+    background: #F1F1F1;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.layout-default_menu {
+    width: 100%;
+}
+
+.layout-default_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.layout-default_menu li {
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+.layout-default_menu a {
+    color: #45C3D2;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.layout-default_menu a.active {
+    color: white;
+    background: #45C3D2;
+}
+
+.menu_sub {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease; 
+    opacity: 0; 
+}
+
+.menu_sub li a {
+    color: #45C3D2;
+}
+
+.menu_sub li a.active {
+    color: white;
+}
+
+.layout-default_body_main {
+    width: 80%;
+    padding: 20px;
+}
+
+.layout-default_menu li:hover .menu_sub {
+    max-height: 200px; 
+    opacity: 1; 
+}
+/* patient list  */
+.patient-dashboard {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .search-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-btn, .add-patient-btn {
+    padding: 8px 12px;
+    background-color: #45C3D2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-btn{
+    background-color: #007bff;
+}
+
+.patient-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.patient-table th, .patient-table td {
+    padding: 10px 5px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.patient-table th {
+    background-color: #f8f9fa;
+}
+
+.patient-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sort-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sort-options select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+
+/* them de co dinh cai duoi  */
+/* Cố định header */
+.layout-default_arm {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Cố định sidebar */
+.layout-default_body_header {
+    position: fixed;
+    top: 50px;
+    height: 100vh;
+    z-index: 9;
+}
+
+/* Điều chỉnh layout để tránh bị che bởi header và sidebar */
+.layout-default_body {
+    margin-top: 50px;
+    
+}
+
+/* Phần chính có thể cuộn */
+.layout-default_body_main {
+    margin-left: 15%;
+    height: calc(100vh - 50px);
+    overflow-y: auto; /* Cuộn dọc cho nội dung dài */
+    scroll-behavior: smooth; /* Hiệu ứng trượt mượt */
+}
+
+/* Ẩn thanh cuộn */
+.layout-default_body_main::-webkit-scrollbar {
+    width: 0px; /* Ẩn thanh cuộn dọc */
+}
+
+/* Làm mượt khi cuộn */
+.layout-default_body_main {
+    scrollbar-width: none; /* Ẩn thanh cuộn cho Firefox */
+    -ms-overflow-style: none; /* Ẩn thanh cuộn cho IE và Edge */
+}
+
+/* chen cai pagin  */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-btn {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.page-btn:disabled {
+    background-color: #007bff;
+    color: white; /* Màu sắc chữ khi nút bị vô hiệu hóa */
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+
+.page-btn:hover:not(:disabled) {
+    background-color: #007bff;
+}
